@@ -1,7 +1,5 @@
 import classes from './MealsSummary.module.css';
 
-const PUBLIC_PATH = process.env.PUBLIC_URL || '';
-
 const MealsSummary = () => {
   return (
     <section className={classes.heroSection}>
@@ -47,7 +45,7 @@ const MealsSummary = () => {
         {/* Right Visual Food Showcase Card */}
         <div className={classes.visualShowcaseCard}>
           <img
-            src={`${PUBLIC_PATH}/home_banner.jpg`}
+            src="home_banner.jpg"
             alt="Signature gourmet spread"
             className={classes.showcaseImg}
           />
@@ -59,7 +57,7 @@ const MealsSummary = () => {
 
           <div className={classes.floatingGlassCard}>
             <div className={classes.dishPreviewThumb}>
-              <img src={`${PUBLIC_PATH}/images/biryani.jpeg`} alt="Royal Biryani" />
+              <img src="images/biryani.jpeg" alt="Royal Biryani" />
             </div>
             <div className={classes.dishPreviewInfo}>
               <span className={classes.previewEyebrow}>CHEF&apos;S PICK</span>
