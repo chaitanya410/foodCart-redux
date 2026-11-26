@@ -1,0 +1,33 @@
+{
+  "name": "food_ordering_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon backend/index.js",
+    "client": "npm start --prefix frontend",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "shantanu",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bootstrap": "^5.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "4.1",
+    "mongoose": "^7.3.1",
+    "react-icons": "^4.10.1"
+  },
+  "allowScripts": {
+    "bcrypt@5.1.0": true
+  }
+}

@@ -1,0 +1,52 @@
+.button {
+  cursor: pointer;
+  font: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--gradient-crave);
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 24px rgba(255, 77, 77, 0.38);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(255, 77, 77, 0.55);
+}
+
+.icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  background-color: rgba(13, 11, 20, 0.8);
+  color: var(--accent-lime);
+  padding: 0.18rem 0.65rem;
+  border-radius: var(--radius-pill);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% { transform: scale(1); }
+  10% { transform: scale(0.92); }
+  30% { transform: scale(1.1); }
+  50% { transform: scale(1.14); }
+  100% { transform: scale(1); }
+}

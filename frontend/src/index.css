@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --bg-obsidian: #07060d;
+  --glass-surface: rgba(255, 255, 255, 0.055);
+  --glass-surface-hover: rgba(255, 255, 255, 0.09);
+  --glass-elevated: rgba(18, 15, 30, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.13);
+  --glass-specular: rgba(255, 255, 255, 0.28);
+
+  --accent-fire: #ff3b5c;
+  --accent-mango: #ff9f1c;
+  --accent-lime: #c8ff00;
+  --accent-violet: #8b5cf6;
+  --gradient-crave: linear-gradient(135deg, #ff3b5c 0%, #ff8c1a 100%);
+  --gradient-lime: linear-gradient(135deg, #c8ff00 0%, #5eead4 100%);
+
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1b5;
+  --radius-2xl: 28px;
+  --radius-xl: 22px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-obsidian) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Architectural Grid Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 50% 30%, black 35%, transparent 85%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Floating Ambient Glow Orbs */
+.ambient-canvas {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.55;
+  animation: floatOrb 16s ease-in-out infinite alternate;
+}
+
+.orb-fire {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #ff3b5c, transparent 70%);
+  top: -100px;
+  left: -80px;
+}
+
+.orb-mango {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, #ff9f1c, transparent 70%);
+  top: 18%;
+  right: -120px;
+  animation-delay: -5s;
+}
+
+.orb-violet {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, #7c3aed, transparent 70%);
+  bottom: -140px;
+  left: 28%;
+  animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(45px, 35px) scale(1.12); }
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.glass-panel {
+  background: var(--glass-surface);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 var(--glass-specular);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07060d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 159, 28, 0.5);
+}

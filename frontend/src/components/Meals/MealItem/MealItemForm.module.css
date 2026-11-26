@@ -1,0 +1,93 @@
+.controlGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 2.4rem;
+}
+
+.stepperPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 0.25rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.stepBtn {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease;
+}
+
+.stepBtn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--accent-mango);
+}
+
+.stepBtn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.stepBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.qtyValue {
+  min-width: 1.5rem;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.addBtn {
+  height: 100%;
+  padding: 0 1.1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--gradient-crave);
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 59, 92, 0.38);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.addBtn:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 10px 24px rgba(255, 59, 92, 0.55);
+}
+
+.addBtn:active {
+  transform: scale(0.95);
+}
+
+.plusIcon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
